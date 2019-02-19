@@ -2,34 +2,35 @@
 {
   "games": [
      {
+      "title": "Chip's Challenge",
+      "year": 1989,
       "platform": [
         {
           "name": "Atari Lynx",
           "launch_year": 1989
         }
-      ],
-      "title": "Chip's Challenge",
-      "year": 1989
+      ]
     },
     {
+      "title": "Chip's Challenge 2",
+      "year": 2005,
       "platform": [
         {
           "name": "Steam",
           "launch_year": 2003
         }
-      ],
-      "title": "Chip's Challenge 2",
-      "year": 2005
+      ]
+
     },
     {
-      "platform": []
+      "title": "Chuck's Challenge",
+      "year": 2012,
+      "platform": [
         {
           "name": "iOS",
           "launch_year": 2010
         }
-      ],
-      "title": "Chuck's Challenge",
-      "year": 2012
+      ]
     }
   ]
 }
