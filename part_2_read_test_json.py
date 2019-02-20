@@ -17,7 +17,7 @@ def make_game_library_from_json(json_data):
             game.platform.name = platform_json["name"]
             game.platform.launch_year = platform_json["launch_year"]
 
-    game_library.add_game(game)
+        game_library.add_game(game)
 
     return game_library
 
