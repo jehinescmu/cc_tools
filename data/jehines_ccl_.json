@@ -1,0 +1,41 @@
+
+{
+  "levels": [
+     {
+       "level_number": 1,
+       "time": 100,
+       "chip_number": 1,
+       "upper_layer": 1,
+       "optional_fields": [
+        {
+          "type": "title",
+          "title": "name here"
+        },
+        {
+          "type": "password",
+          "password": "name here"
+        },
+        {
+          "type": "hint",
+          "hint": "name here"
+        },
+        {
+          "type": "monsters",
+          "title": "name here"
+        }
+       ]
+    },
+    {
+      "title": "Chip's Challenge 2",
+      "year": 2005,
+      "platform": [
+        {
+          "name": "Steam",
+          "launch_year": 2003
+        }
+      ]
+
+    }
+  ]
+}
+
