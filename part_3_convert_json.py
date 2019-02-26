@@ -6,11 +6,8 @@ import cc_data
 # Part 1 ===================================================================================
 # Creates and returns a GameLibrary object(defined in test_data) from loaded json_data
 def make_cc_level_from_json(level_json):
-    # Initialize a new game library
-    new_level = cc_data.CCLevel()
-# Loop through each individual game
 
-    # Initialize a new game
+    # Initialize a new level
     new_level = cc_data.CCLevel()
     new_level.level_number = level_json["level_number"]
     new_level.num_chips = level_json["num_chips"]
@@ -19,7 +16,7 @@ def make_cc_level_from_json(level_json):
 
     # Loop through each detail of the platform
     for field_json in level_json["optional_fields"]:
-        #check the ID and if that field exits within the json, make a new field with that data
+        #check the type and if that field exits within the json, make a new field with that data
         if field_json["type"] == "title":
             new_field = cc_data.CCMapTitleField(field_json["title_data"])
             new_level.add_field(new_field)
