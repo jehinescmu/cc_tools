@@ -19,7 +19,7 @@ def make_cc_data_file_from_json(json_data):
     cc_data_file = cc_data.CCDataFile()
 
     # Loop through each individual game
-    for game_json in json_data["games"]:
+    for level_json in json_data["levels"]:
         # Initialize a new game
         game = test_data.Game()
         game.title = game_json["title"]
