@@ -37,3 +37,14 @@ def make_cc_data_file_from_json(json_data):
 
     # return the completed library
     return game_library
+
+
+
+new_level = cc_data.CCLevel()
+new_level.level_number = level_json["level_number"]
+new_level
+new_level.upper_layer = [0,0,0,0]
+
+for field_json in leve_json["optional_fields"]
+    if field_json["id"] =="title":
+        new_field = cc_data.CCMapTitleFireld(field_json)
