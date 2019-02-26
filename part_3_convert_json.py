@@ -1,12 +1,12 @@
 import cc_dat_utils
-import json
 import cc_data
+import json
+
 
 
 # Part 1 ===================================================================================
 # Creates and returns a GameLibrary object(defined in test_data) from loaded json_data
 def make_cc_level_from_json(level_json):
-
     # Initialize a new level
     new_level = cc_data.CCLevel()
     new_level.level_number = level_json["level_number"]
@@ -39,6 +39,9 @@ def make_cc_level_from_json(level_json):
 
     # return the completed level
     return new_level
+
+input_json_file = "data/jehines_ccl.json"
+
 
 with open("data/jehines_ccl.json", "r") as reader:
     library_json = json.load(reader)
