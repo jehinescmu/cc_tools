@@ -9,6 +9,7 @@ import json
 def make_cc_level_from_json(level_json):
     # Initialize a new level
     new_level = cc_data.CCLevel()
+
     new_level.level_number = level_json["level_number"]
     new_level.num_chips = level_json["num_chips"]
     new_level.time = level_json["time"]
