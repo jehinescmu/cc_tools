@@ -19,21 +19,21 @@ def make_cc_level_from_json(level_json):
     for field_json in level_json["optional_fields"]:
         #check the type and if that field exits within the json, make a new field with that data
         if field_json["type"] == "title":
-            new_field = cc_data.CCMapTitleField(field_json["title_data"])
+            new_field = cc_data.CCMapTitleField(field_json["title"])
             new_level.add_field(new_field)
-        elif field_json["type"] == 'hint':
-            new_field = cc_data.CCMapHintField(field_json["hint_data"])
+        elif field_json["type"] == "hint":
+            new_field = cc_data.CCMapHintField(field_json["hint"])
             new_level.add_field(new_field)
-        elif field_json["type"] == 'password':
-            new_field = cc_data.CCEncodedPasswordField(field_json["password_data"])
+        elif field_json["type"] == "password":
+            new_field = cc_data.CCEncodedPasswordField(field_json["password"])
             new_level.add_field(new_field)
-        elif field_json["type"] == 'monsters':
+        elif field_json["type"] == "monsters":
             # The monsters parameter is a list of coordinates
             # Create an Empty list to hold coordinates
             monster_coordinates = []
             # For each every item in the monster data list, build a new coordinate from the json file 0 = x 1 = 1
             # Create a new field with these new coordinates
-            for monster_json in field_json["monster_data"]:
+            for monster_json in field_json["monsters"]:
                 monster_coordinates.append(cc_data.CCCoordinate(monster_json[0], monster_json[1]))
                 new_field = cc_data.CCMonsterMovementField(monster_coordinates)
                 new_level.add_field(new_field)

@@ -41,7 +41,7 @@ class CCMapTitleField(CCField):
     """
     TYPE = 3
 
-    def __init__(self, title):
+    def __init__(self, title: object) -> object:
         if __debug__:
             if len(title) >= 64: raise AssertionError("Map Title must be 63 characters or fewer. Current title is '"+title+"'("+str(len(title))+")")
         self.type_val = CCMapTitleField.TYPE
