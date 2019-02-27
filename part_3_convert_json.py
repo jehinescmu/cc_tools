@@ -36,21 +36,22 @@ def make_cc_level_from_json(level_json):
             for monster_json in field_json["monsters"]:
                 monster_coordinates.append(cc_data.CCCoordinate(monster_json[0], monster_json[1]))
                 new_field = cc_data.CCMonsterMovementField(monster_coordinates)
-                new_level.add_field(new_field)
+            new_level.add_field(new_field)
 
     # return the completed level
     return new_level
-
-input_json_file = "data/jehines_ccl.json"
 
 
 with open("data/jehines_ccl.json", "r") as reader:
     library_json = json.load(reader)
 
+    # Open the file specified by input_json_file + use the json module to load the data from the file
     cc_level_data = cc_data.CCDataFile()
+
+    # Loop through levels in the json file
     for level_json in library_json:
         cc_level_data.add_level(make_cc_level_from_json(level_json))
 
-
+# Print the resulting Level
 print(cc_level_data)
 cc_dat_utils.write_cc_data_to_dat(cc_level_data, "data/jehines_ccl.dat")
